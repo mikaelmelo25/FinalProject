@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DorsetStay | Find your perfect stay in Dorset</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            color: #ff385c;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #222;
+            font-weight: 500;
+        }
+
+        .hero {
+            height: 80vh;
+            background: url('/api/placeholder/1920/1080') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .search-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            width: 90%;
+            max-width: 800px;
+            margin-top: -5rem;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .search-bar {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .search-button {
+            background: #ff385c;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 4rem 0;
+            padding: 0 5%;
+        }
+
+        .category {
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .category i {
+            font-size: 2rem;
+            color: #ff385c;
+            margin-bottom: 0.5rem;
+        }
+
+        .listings {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 0 5%;
+            margin-bottom: 4rem;
+        }
+
+        .listing-card {
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .listing-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .listing-details {
+            padding: 1rem;
+        }
+
+        .listing-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .listing-price {
+            color: #666;
+        }
+
+        .rating {
+            color: #ff385c;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <i class="fas fa-home"></i> DorsetStay
+        </div>
+        <div class="nav-links">
+            <a href="#">Become a Host</a>
+            <a href="#">Sign Up</a>
+            <a href="#">Login</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Find your perfect stay in Dorset</h1>
+    </div>
+
+    <div class="search-container">
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Where in Dorset are you going?">
+            <input type="date" class="search-input">
+            <input type="number" class="search-input" placeholder="Guests">
+            <button class="search-button">Search</button>
+        </div>
+    </div>
+
+    <div class="categories">
+        <div class="category">
+            <i class="fas fa-house"></i>
+            <p>Private Room</p>
+        </div>
+        <div class="category">
+            <i class="fas fa-mountain"></i>
+            <p>Shared Room</p>
+        </div>
+        <div class="category">
+            <i class="fas fa-water"></i>
+            <p>Studio Apartment</p>
+        </div>
+        <div class="category">
+            <i class="fas fa-umbrella-beach"></i>
+            <p>Private Apartment</p>
+        </div>
+    </div>
+
+    <div class="listings">
+        <div class="listing-card">
+            <img src="/api/placeholder/400/300" alt="Property" class="listing-image">
+            <div class="listing-details">
+                <div class="listing-title">Charming Cottage in Dorchester</div>
+                <div class="listing-price">£150 / night</div>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half"></i>
+                    4.5
+                </div>
+            </div>
+        </div>
+        <div class="listing-card">
+            <img src="/api/placeholder/400/300" alt="Property" class="listing-image">
+            <div class="listing-details">
+                <div class="listing-title">Seaside Villa in Weymouth</div>
+                <div class="listing-price">£225 / night</div>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    5.0
+                </div>
+            </div>
+        </div>
+        <div class="listing-card">
+            <img src="/api/placeholder/400/300" alt="Property" class="listing-image">
+            <div class="listing-details">
+                <div class="listing-title">Rural Retreat near Bridport</div>
+                <div class="listing-price">£195 / night</div>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    4.0
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
